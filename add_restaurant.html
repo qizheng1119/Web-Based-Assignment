@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Add Restaurant</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="header">
+                <a class="home" href="index.html"><img src="image/logo.png"></a>
+                <div style="font-family: Times New Roman" class="header-right">
+                    <a href="search.html">Searching</a>
+                    <a href="topRestaurantList.html">Top Restaurant List</a>
+                    <a class="active"href="add_restaurant.html">Add Restaurant</a>
+                    <a href="ratingList.html">Rating & Feedback</a>
+                    <a href="forumList.html">Q&A Forum</a>
+                    <a class="login"href="Login.html">Sign In</a>
+                </div>    
+            </div>
+
+        <main>
+            <div class="bg">
+                <div id="Main" class="clearfix">
+                    <div id="content-add_restaurant">
+                    <h2>Do share your favourites restaurant</h2>
+                    </div>
+      
+                    <div id="background_add_restaurant">
+                      <div id="add_restaurant">
+                          <form action="/action_page.php">
+                              <label for="fname">Restaurant name:</label>
+                              <input type="text" id="restaurantname" name="rname" ><br><br><br>
+                              <label for="lname">Cuisine:</label>
+                              <input type="text" id="cuisine" name="c" ><br><br><br>
+                              <label for="fname">Restaurant Description:</label>
+                              <input type="text" id="restaurantdesc" name="rdesc" ><br><br><br>
+                              <label for="fname">add photo:</label>
+                              <input type="file" accept="image/*" onchange="previewImage(event)">
+                              <br>
+                              <img id="preview" src="#" width="200" height="100">
+                              <script src="add.js"></script>
+                              
+                              <br><br><br>
+                              <input type="submit" value="Submit">
+                            </form> 
+                      </div>  
+                    </div>
+      
+                  </div>
+            </div>
+            
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="social">
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                </div>
+    
+                <p class="copyright">
+                    Group 17 @ 2023
+                </p>
+        </footer>
+    </body>
+
+
+</html>

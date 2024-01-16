@@ -1,0 +1,703 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* header style */
+.header {
+    overflow: hidden;
+    background-color: rgba(128, 128, 128, 0.3);
+    padding: 30px 30px;
+}
+
+.header-right {
+    padding:18px 0px;
+    float: right;
+}
+
+.header img {
+    float: left;
+    width: auto;
+    height: 80px;
+    padding-left: 40px;
+}
+
+.header-right a {
+    float: inline-start;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.header-right a:hover {
+    background-color: darkgrey;
+    color: #f1f1f1;
+}
+
+.header-right a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.header-right .login{
+    background-color: orange;
+    color: white;
+}
+
+/* background pic */
+.bg {
+    flex: 1;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.bg::before {
+    content: "";
+    background-image: url("image/background.png");
+    background-size: cover;
+    background-repeat: repeat;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.75;
+    z-index: -1;
+}
+
+/* home css */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 102px;
+  }
+  
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .content {
+    padding:0px;
+  }
+  
+  .carousel-content {
+    position: absolute;
+    bottom: 40%;
+    left: 10%;
+    padding-right: 50%;
+    color: white;
+  }
+  
+  .content {
+    padding:0px;
+  }
+  
+  .carousel-caption {
+    padding-right: 300px;   
+  }
+  
+  /* add restaurant */
+  .clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#content-add_restaurant{
+    color: white;
+    background-color: grey;
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px ;
+}
+
+#background_add_restaurant{ 
+    float: left;
+    padding: 30px;
+    height: 80%;
+    width: 100%;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 34% ;
+}
+
+#add_restaurant{
+    width: 50%;
+    min-height: 430px;
+    background-color: darkgrey;
+    padding: 60px;
+    border-radius: 25px;
+    text-align: justify;
+    
+}
+
+/* search */
+.search{
+    min-height: 1vh;
+    margin: 20px 150px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.search input{
+    flex: 1;
+    padding: 20px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 24px 20px;
+    background-color: rgb(240, 236, 236);
+}
+.search button{
+    align-items: center;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: aliceblue;
+    color: black;
+    font-weight: bold;
+}
+
+.maps {
+    padding: 25px 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-right: 8%;
+}
+
+.maps h1 {
+    font-size: 48px;
+    color: #f1f1f1;
+}
+
+.searchContainer {
+    width: 100%;
+}
+
+.searchContainer .row {
+    width: 80%;
+    margin: auto;
+}
+
+.searchContainer .row .searchheader {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+.searchContainer .row .searchheader h1 {
+    padding-top: 30px;
+    font-size: 45px;
+    color: black;
+}
+
+.searchContainer .row .searchheader p {
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #6e6e6e;
+}
+
+.searchContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.searchContent.searchcard {
+    flex: 1;
+    margin: 50px 20px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.searchContent .searchcard img {
+    margin: 10px;
+    width: 325px;
+    height: 200px;
+}
+
+.searchContent .searchcard h4 {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.searchContent .searchcard p {
+    font-size: 15px;
+    color: #6e6e6e;
+    line-height: 1.5;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .searchContent {
+        flex-direction: column;
+    }
+}
+
+/* login */
+.Logincontainer h1{
+    margin-top: 10px;
+}
+.Logincontainer{
+position: absolute;
+right: 0;
+margin: 20px;
+width: 400px;
+padding: 50px;
+margin-bottom: 100px;
+background-color: lightgray;
+border-radius: 10px;
+height: 450px;
+}
+
+
+.signin_signup input[type=text], .signin_signup input[type=password]{
+width: 100%;
+padding: 20px;
+margin: 5px 0 22px 0;
+border: none;
+background: #f1f1f1;
+border: 2px solid rgb(255, 255, 255, .2);
+border-radius: 40px;
+}
+
+.signin_signup input[type=text]:focus, .signin_signup input[type=password]:focus{
+background-color:#ddd;
+outline: none;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.btn:hover{
+opacity: 1;
+}
+
+.signup-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.signup-link p a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-link p a:hover{
+    text-decoration: underline;
+}
+.Logincontainer .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: 3px;
+
+}
+
+.remember-forgot label input{
+    accent-color: black;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: black;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: overline;
+}
+
+.Logincontainer .signup-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.signup-link p a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-link p a:hover{
+    text-decoration: underline;
+}    
+
+/* signin */
+.Siginmain{
+    width: 100%;
+    height: 700px;
+    padding-top: 5%;
+    padding-left: 7%;
+}
+
+.wrapper{
+    margin-left: 440px;
+    width: 450px;
+    background: lightgray;
+    color: black;
+    border-radius: 10px;
+    padding: 30px 40px;
+
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    width: 100%;
+    height: 50px;
+    background: lightgray;
+    margin: 50px 0;
+    
+}
+
+.input-box input{
+    width: 100%;
+    margin-top: 10px;
+    height: 100%;
+    background: #f1f1f1;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(255, 255, 255, .2);
+    font-size: 16px;
+    color: black;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: black;
+}
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    font-size: 20px;
+}
+.wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 10px;
+}
+#main{
+    float: left;
+    width:100%;
+    height: 100%;
+}
+
+/* forum style */
+.forum_container{
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    box-sizing: border-box;
+    font-size:14px;
+    padding: 20px;
+}
+
+.forum_subcontainer{
+    margin-top: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.forum_title{
+    background-color: grey;
+    color:white;
+    font-size: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 4px;
+    margin-bottom: 50px;
+}
+
+.forum_row{
+    display: grid;
+    grid-template-columns: 20% 55% 15% 10%;
+}
+
+.forum_column{
+    padding: 30px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 5px;
+    margin-bottom: 15px;
+}
+
+.forum_center{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.forum_row a{
+    text-decoration: none;
+    color:#a887fa;
+}
+
+.forum_img img{
+    border-radius: 50%;
+    width: auto;
+    height: 120px;
+    margin: auto;
+}
+
+/* rating */
+.rating_forum_restaurant_container{
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    box-sizing: border-box;
+    font-size:14px;
+    padding: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.restaurant_name_pic{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.restaurant_pic{
+    display: flex;
+    align-items: center;
+}
+
+.restaurant_pic img{
+    width:auto;
+    border-radius: 50%;
+    height: 150px;
+}
+
+.restaurant_name{
+    display: flex;
+    align-items: center;
+}
+
+.restaurant_name h1{
+    float: left;
+    text-align: center;
+}
+
+.restaurant_column{
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.rating_star_column{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+}
+
+.rating_bg{
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.total_rating_star{
+    padding-top: 45px;
+    padding-bottom: 60px;
+    padding-left: 10px;
+}
+
+.total_star_collect{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.star_collect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 10px;
+    align-items: center;
+}
+
+.rating_comment_container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.rating_title_container{
+    background-color: white;
+}
+
+.all_rating_title{
+    background-color: white;
+}
+
+.each_comment{
+    border-radius: 10px;
+    border-color: black;
+    border-width: thin;
+    background-color: rgb(119, 128, 0);
+    width:800px;
+    padding: 10px 0px 10px 10px;
+}
+
+.comment_padding{
+    padding-bottom: 5px;
+}
+
+.checked{
+    color:orange;
+}
+
+/* forum detail */
+.rating_ques_ans{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    background-color: white;
+    padding: 20px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.ques_ans_desc{
+    padding-right: 20px;
+    word-break: break-word;
+    padding-bottom: 10px;
+}
+
+.ans{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* restaurant list */
+.restaurant_list{
+    display: grid;
+    grid-template-columns: 85% 15%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.restaurant_list_pic img{
+    border-radius:50%;
+    width: auto;
+    height: 120px;
+}
+
+.restaurant_list_desc{
+    margin: auto;
+    width: 90%;
+    word-break: break-word;
+}
+
+.restaurant_list_desc a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* footer */
+
+.footer {
+    margin-top: auto;
+    padding: 10px ;
+    background-color: grey;
+  }
+  
+  .footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: #f1f1f1;
+  }
+  
+  .footer .social a{
+   font-size: 24px; 
+   color: inherit;
+  border: 1px solid #ccc; 
+  width: 40px;
+  height: 40px; 
+  Line-height: 38px;
+  display: inline-block; 
+  text-align: center; 
+  border-radius: 50%; 
+  margin: 0 8px; 
+  opacity: 0.75; 
+  }
+  
+  .footer .social a:hover{
+    opacity: 0.9;
+    font-weight: bold;
+  }
+  
+  .footer .copyright{
+    text-align:center;
+    color: #f1f1f1;
+  }
+
+  .caption{
+    position: absolute;
+    top: 100px;
+    right: 550px;
+    color: black;
+    padding-left: 150px;
+    text-align: left;
+    font-size: large;
+  }
+
+ 
